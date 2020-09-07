@@ -17,7 +17,7 @@ script:
   - ansible-lint roles/*
   - yamllint roles/*
   # from: https://github.com/diodonfrost/ansible-role-vagrant/blob/master/.travis.yml#L162
-  - 'distribution=${distribution} vagrant_version=${vagrant_version} molecule test'
+  - 'distribution=${distribution} molecule test'
 
 ## modified from: https://github.com/diodonfrost/ansible-role-vagrant/blob/master/.travis.yml
 env:
@@ -27,11 +27,8 @@ env:
 #
 #-----------------------------------------------
   - distribution: centos-8
-    vagrant_version: latest
   - distribution: centos-7
-    vagrant_version: latest
   - distribution: centos-6
-    vagrant_version: latest
 
 #--------------------------------
 #
@@ -39,19 +36,12 @@ env:
 #
 #--------------------------------
   - distribution: fedora-32
-    vagrant_version: latest
   - distribution: fedora-31
-    vagrant_version: latest
   - distribution: fedora-30
-    vagrant_version: latest
   - distribution: fedora-29
-    vagrant_version: latest
   - distribution: fedora-28
-    vagrant_version: latest
   - distribution: fedora-27
-    vagrant_version: latest
   - distribution: fedora-26
-    vagrant_version: latest
 
 #--------------------------------
 #
@@ -59,13 +49,9 @@ env:
 #
 #--------------------------------
   - distribution: ubuntu-20.04
-    vagrant_version: latest
   - distribution: ubuntu-18.04
-    vagrant_version: latest
   - distribution: ubuntu-16.04
-    vagrant_version: latest
   - distribution: ubuntu-14.04
-    vagrant_version: latest
 
 #--------------------------------
 #
@@ -73,11 +59,8 @@ env:
 #
 #--------------------------------
   - distribution: debian-10
-    vagrant_version: latest
   - distribution: debian-9
-    vagrant_version: latest
   - distribution: debian-8
-    vagrant_version: latest
 
 ##
 
