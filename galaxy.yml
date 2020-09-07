@@ -4,7 +4,7 @@ version: "1.0.34"
 readme: "README.md"
 authors:
   - "Mihai Criveti (https://twitter.com/crivetimihai)"
-  - "Alex R. (https://twitter.com/RonJonArod"
+  - "Alex R. (https://twitter.com/RonJonArod)"
 description: "Virtualization tools - VirtualBox, KVM, VMware, LXD, Docker-CE, Podman, Vagrant, Packer"
 license:
   - "MIT"
