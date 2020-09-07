@@ -22,7 +22,7 @@ tags:
   - vmtools
   - packaging
   - collection
-repository: "https://www.github.com/crivetimihai/ansible_virtualization"
-homepage: "https://www.github.com/crivetimihai/ansible_virtualization"
+repository: "https://www.github.com/elreydetoda/ansible_virtualization"
+homepage: "https://www.github.com/elreydetoda/ansible_virtualization"
 documentation: "https://crivetimihai.github.io/ansible_virtualization/"
-issues: "https://www.github.com/crivetimihai/ansible_virtualization/issues"
+issues: "https://www.github.com/elreydetoda/ansible_virtualization/issues"
