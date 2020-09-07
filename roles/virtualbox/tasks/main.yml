@@ -20,3 +20,8 @@
 - name: 'Ubuntu'
   include_tasks: install_Ubuntu.yml
   when: ansible_facts['distribution'] == "Ubuntu" and ansible_facts['distribution_version'] == "18.04"
+
+- include: configure.yml
+
+- include: extensions.yml
+  when: install_extpacks

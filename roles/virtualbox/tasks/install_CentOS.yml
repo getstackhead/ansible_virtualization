@@ -31,9 +31,3 @@
     state: present
   when: ansible_facts['distribution'] == "CentOS" and ansible_facts['distribution_major_version']|int == 7
   become: yes
-
-- import_tasks: configure.yml
-
-- name: 'Extension Pack'
-  include_tasks: extensions.yml
-  when: install_extpacks

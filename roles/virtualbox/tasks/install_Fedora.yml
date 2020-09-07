@@ -25,9 +25,3 @@
     state: present
   when: ansible_facts['distribution'] == "Fedora" and ansible_facts['distribution_major_version']|int >= 30
   become: yes
-
-- import_tasks: configure.yml
-
-- name: 'Extension Pack'
-  include_tasks: extensions.yml
-  when: install_extpacks

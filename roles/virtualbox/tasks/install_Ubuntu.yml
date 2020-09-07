@@ -33,9 +33,3 @@
     name: "{{ vboxdrv_required_packages_ubuntu_1804 }}"
     state: present
   become: yes
-
-- import_tasks: configure.yml
-
-- name: 'Extension Pack'
-  include_tasks: extensions.yml
-  when: install_extpacks

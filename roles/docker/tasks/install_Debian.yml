@@ -34,5 +34,3 @@
     name: "{{ debian_docker_packages }}"
     state: present
   become: yes
-
-- import_tasks: configure.yml
