@@ -2,31 +2,36 @@
 extends: default
 
 rules:
-  braces:
-    max-spaces-inside: 1
-    level: error
-  brackets:
-    max-spaces-inside: 1
-    level: error
-  colons: enable
-  commas: enable
-  comments:
-    level: warning
-  comments-indentation:
-    level: warning
-  document-end: disable
-  document-start:
-    level: warning
-  empty-lines: enable
-  empty-values: enable
-  hyphens: enable
-  indentation: enable
-  key-duplicates: enable
-  key-ordering: disable
-  line-length: disable
-  new-line-at-end-of-file: disable
-  new-lines: enable
-  octal-values: enable
-  quoted-strings: disable
-  trailing-spaces: enable
-  truthy: disable
+  truthy:
+    allowed-values:
+      - 'true'
+      - 'false'
+      - 'yes'
+      - 'no'
+#   braces:
+#     max-spaces-inside: 1
+#     level: error
+#   brackets:
+#     max-spaces-inside: 1
+#     level: error
+#   colons: enable
+#   commas: enable
+#   comments:
+#     level: warning
+#   comments-indentation:
+#     level: warning
+#   document-end: disable
+#   document-start:
+#     level: warning
+#   empty-lines: enable
+#   empty-values: enable
+#   hyphens: enable
+#   indentation: enable
+#   key-duplicates: enable
+#   key-ordering: disable
+#   line-length: disable
+#   new-line-at-end-of-file: disable
+#   new-lines: enable
+#   octal-values: enable
+#   quoted-strings: disable
+#   trailing-spaces: enable
