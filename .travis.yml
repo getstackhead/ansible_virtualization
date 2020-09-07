@@ -16,6 +16,7 @@ install:
 script:
   - ansible-lint roles/*
   - yamllint roles/*
+  # - 'distribution=${distribution} molecule lint'
   # from: https://github.com/diodonfrost/ansible-role-vagrant/blob/master/.travis.yml#L162
   - 'distribution=${distribution} molecule test'
 
@@ -35,6 +36,7 @@ env:
 # Fedora
 #
 #--------------------------------
+  - distribution: fedora-33
   - distribution: fedora-32
   - distribution: fedora-31
   - distribution: fedora-30
