@@ -11,7 +11,7 @@ cache:
 install:
   - pip install --upgrade pip
   - pip install pipenv
-  - pipenv install -d
+  - pipenv install -d --deploy --system
 
 script:
   - ansible-lint roles/*
@@ -80,6 +80,10 @@ env:
     vagrant_version: latest
 
 ##
+
+# https://github.com/diodonfrost/ansible-role-vagrant/blob/master/.travis.yml#L155-L156
+before_install:
+  - 'docker pull diodonfrost/${distribution}-ansible:latest'
 
 # from: https://github.com/diodonfrost/ansible-role-vagrant/blob/master/.travis.yml#L164-L165
 notifications:
