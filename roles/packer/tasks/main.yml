@@ -1,8 +1,10 @@
 ---
 # tasks file for packer
+## OS Specific first
 - include: install_Debian.yml
   when: ansible_facts['os_family'] == "Debian"
 
+## General OSes
 - name: install unzip
   package:
     name: unzip
