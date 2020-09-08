@@ -9,10 +9,10 @@ vbox_users:
   - vagrant
 
 # VirtualBox major version to install
-virtualbox_version: "6.0"
+virtualbox_version: "6.1"
 
 # Full version number
-virtualbox_version_full: "6.0.12"
+virtualbox_version_full: "6.1.0"
 
 # Install extensions listed in virtualbox_extpacks_urls (requires license)
 install_extpacks: no
