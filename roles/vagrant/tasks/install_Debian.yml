@@ -1,8 +1,15 @@
 ---
 # Install vagrant on Debian
 
-- name: Install Debian packages
-  apt:
-    deb: "{{ item }}"
-  loop: "{{ debian_packages }}"
-  become: yes
+- name: add hashicorp apt signing key
+  apt_key:
+    url: 'https://apt.releases.hashicorp.com/gpg'
+    state: present
+- name: setup hashicorp apt repository on Ubuntu
+  apt_repository:
+    repo: "deb [arch=amd64] https://apt.releases.hashicorp.com {{ ansible_facts['distribution_release'] }} main"
+    state: present
+- name: installing vagrant
+  package:
+    name: vagrant
+    state: present
