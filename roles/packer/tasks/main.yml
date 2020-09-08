@@ -1,17 +1,21 @@
 ---
 # tasks file for packer
+- include: install_Debian.yml
+  when: ansible_facts['os_family'] == "Debian"
 
 - name: install unzip
   package:
     name: unzip
     state: present
   become: yes
+  when: ansible_facts['os_family'] != "Debian"
 
 - name: download packer zip
   get_url:
     url: "{{ packer_zip_url }}"
     checksum: "sha256:{{ packer_sha256_url }}"
     dest: /tmp/packer.zip
+  when: ansible_facts['os_family'] != "Debian"
 
 - name: unpack packer
   unarchive:
@@ -19,8 +23,10 @@
     dest: /usr/local/bin
     copy: no
   become: yes
+  when: ansible_facts['os_family'] != "Debian"
 
 - name: remove packer zip
   file:
     path: /tmp/packer.zip
     state: absent
+  when: ansible_facts['os_family'] != "Debian"

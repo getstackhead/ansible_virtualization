@@ -1,0 +1,13 @@
+---
+- name: add hashicorp apt signing key
+  apt_key:
+    url: 'https://apt.releases.hashicorp.com/gpg'
+    state: present
+- name: setup hashicorp apt repository on Ubuntu
+  apt_repository:
+    repo: "deb [arch=amd64] https://apt.releases.hashicorp.com {{ ansible_facts['distribution_release'] }} main"
+    state: present
+- name: installing packer
+  package:
+    name: packer
+    state: present
