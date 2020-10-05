@@ -17,7 +17,7 @@
   become: yes
 
 - name: setup VMware Workstation license
-  command: /usr/lib/vmware/bin/vmware-vmx-debug --new-sn "{{ vmware_license_key }}"
+  command: /usr/lib/vmware/bin/vmware-vmx --new-sn "{{ vmware_license_key }}"
   when: (vmware_license_key is defined ) and ( vmware_license_key | length > 0 )
   become: yes
 
