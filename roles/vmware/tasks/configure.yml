@@ -36,7 +36,9 @@
       network1.device = "vmnet1"
       network8.name = "NAT"
       network8.device = "vmnet8"
-  when: (circleci is defined ) and ( circleci | length > 0 )
+  when:
+    - (circleci is defined ) and ( circleci | length > 0 )
+    - (vmware_license_key is defined ) and ( vmware_license_key | length > 0 )
   become: yes
 
 - name: Create systemd services
