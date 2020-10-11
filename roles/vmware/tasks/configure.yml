@@ -21,6 +21,11 @@
   when: (vmware_license_key is defined ) and ( vmware_license_key | length > 0 )
   become: yes
 
+- name: setup default netmap.conf
+  command: /usr/lib/vmware/bin/vmware-vmx --new-sn "{{ vmware_license_key }}"
+  when: (circleci is defined ) and ( circleci | length > 0 )
+  become: yes
+
 - name: Create systemd services
   copy:
     src: "{{ item }}"
