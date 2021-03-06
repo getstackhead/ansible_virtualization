@@ -19,7 +19,7 @@
 
 - name: reload systemd
   command: systemctl daemon-reload
-  when: ansible_distribution == 'Ubuntu' and ansible_lsb.major_release|int >= 20
+  when: ansible_facts['distribution'] == 'Ubuntu' and ansible_facts['distribution_major_version']|int >= 20
 
 - name: Start the docker service
   systemd:
